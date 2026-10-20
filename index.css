@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  /* ThingsBoard Color Palette */
+  --bg-color: #f2f4f6; /* Very light gray/blue background */
+  --card-bg: #2d4c71; /* Deep Navy Blue */
+  --tb-orange: #ff5722; /* Primary action color */
+  --tb-orange-hover: #e64a19;
+  --text-main: #ffffff; /* White text on navy background */
+  --text-muted: #a6b5c7; /* Muted text */
+  --input-border: #4a688b; /* Lighter navy for borders */
+  --input-bg-focus: #264364; /* Slightly darker navy for input focus */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  /* The reference uses a very subtle radial effect, we'll keep it simple light */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-container {
+  background-color: var(--card-bg);
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography elements */
+.tb-logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.tb-logo-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.tb-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.tb-subtitle {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+/* Social Buttons */
+.social-login {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btn-social {
+  flex: 1;
+  background: white;
+  color: #333;
+  border: none;
+  padding: 10px 0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-social:hover {
+  background: #f0f0f0;
+}
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+  color: white;
+  font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--input-border);
+}
+
+.divider span {
+  padding: 0 12px;
+}
+
+/* Form inputs with floating labels */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.tb-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--input-border);
+  color: white;
+  padding: 16px 16px 16px 48px; /* Room for icon */
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.tb-input:focus {
+  outline: none;
+  border-color: #8babd8;
+  background-color: var(--input-bg-focus);
+}
+
+.input-icon.left {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0.8;
+}
+
+.input-icon.right {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+/* Label styling simulating the Material outline floating label */
+.floating-label {
+  position: absolute;
+  left: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--text-muted);
+  transition: 0.2s ease all;
+  pointer-events: none;
+  padding: 0 4px;
+}
+
+/* When input has focus or holds value */
+.tb-input:focus ~ .floating-label,
+.tb-input:not(:placeholder-shown) ~ .floating-label {
+  top: 0;
+  font-size: 12px;
+  color: #8babd8;
+  background-color: var(--card-bg); /* Match card bg so line doesn't cross text */
+}
+
+/* Primary Button */
+.btn-primary {
+  width: 100%;
+  background-color: var(--tb-orange);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-primary:active, .btn-primary:hover {
+  background-color: var(--tb-orange-hover);
+}
+
+/* Footer links */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.card-footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+.dont-have-account {
+  color: var(--text-muted);
+}
