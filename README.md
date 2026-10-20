@@ -1,16 +1,45 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# IoT-Based Smart Intrusion Detection System
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project focuses on detecting network-based attacks in Internet of Things (IoT) environments using a hybrid machine learning approach.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* MATLAB
+* Bayesian Optimization
+* Logistic Regression
+* Random Forest
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Network intrusion detection
+* DDoS attack detection
+* Malware detection
+* Anomaly detection
+* Security alert generation
+
+## Project Modules
+
+* Data Preprocessing
+* Bayesian Optimization
+* Logistic Regression
+* Random Forest Classification
+* Attack Detection
+* Alert System
+* Model Storage
+
+## Project Documentation
+
+The project report and presentation are available in this repository.
+
+## Author
+
+Vimal Raj A
+
+## Degree
+
+M.Sc. Artificial Intelligence
+
+Bharathidasan University, Tiruchirappalli
